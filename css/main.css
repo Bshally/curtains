@@ -235,10 +235,35 @@ legend{
   border: 1px solid #777;
 }
 
-/*SVG stuffs*/
+.curtain-wrap{
+    position: relative;
+    margin: 10px auto;
+    width: 50%;
+    padding: 0;
+}
 
-#vinyl{
-    height:550px;
+.slider{
+float:left;
+}
+
+.curtain{
+float:right;
+    position:relative;
+
+}
+span.bottom-label{
+    position: absolute;
+    bottom:0;
+    left: -50px;
+}
+span.top-label{
+    position:absolute;
+    top:0;
+    left:-50px;
+}
+
+span.current-label{
+    
 }
 
 
