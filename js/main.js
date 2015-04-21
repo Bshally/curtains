@@ -7,20 +7,26 @@ $(document).ready(function(){
     var topLabel = document.getElementById("top-label");
     var bottomLabel = document.getElementById("bottom-label");
     var currentLabel = document.getElementById("current-label");
+
     console.log(topLabel)
     //SVG OBJ's
     var vinyl = $("#vinyl");
-    //END SVG OBJ's
-	slider.max = 10;
+    //Set Global variables
     var sqFt;
+    var percentage;
+    //Calc sqft and set slider max range and labels
     $('form').on('submit', function(event){
         event.preventDefault();
         var newMax = parseInt(height.value);
-        console.log(topLabel);
         topLabel.innerHTML = newMax + " Feet";
-        console.log(topLabel);
         slider.max = newMax;
       	sqFt = parseInt(height.value ) * parseInt(width.value);
+        currentLabel.innerHTML = slider.value + "Feet";
+
+    });
+    //Detect change in range and convey to current label
+    $('#ratio').on("change mousemove", function() {
+        currentLabel.innerHTML = slider.value + " Feet" ;
     });
     //TweenLite.to(vinyl, 3, {
     //    //attr:{height:250}
