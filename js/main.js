@@ -7,31 +7,26 @@ $(document).ready(function(){
     var topLabel = $(".top-label");
     var bottomLabel = document.getElementsByClassName("bottom-label");
     var currentLabel = document.getElementsByClassName("current-label");
+    console.log(topLabel)
     //SVG OBJ's
     var vinyl = $("#vinyl");
     //END SVG OBJ's
 	slider.max = 10;
-  var sqFt;
-        $('form').on('submit', function(event){
-          event.preventDefault();
-            var newMax = parseInt(height.value);
-            console.log(topLabel);
-            $(".topLabel").Innertext="newMax";
-            console.log(topLabel);
-            slider.max = newMax;
-          	sqFt = parseInt(height.value ) * parseInt(width.value);
-
-        });
-
-
-
-
+    var sqFt;
+    $('form').on('submit', function(event){
+        event.preventDefault();
+        var newMax = parseInt(height.value);
+        console.log(topLabel);
+        topLabel[0].innerHTML = newMax + " Feet";
+        console.log(topLabel);
+        slider.max = newMax;
+      	sqFt = parseInt(height.value ) * parseInt(width.value);
+    });
     //TweenLite.to(vinyl, 3, {
     //    //attr:{height:250}
     //
     //});
-
-    });
+});
 
 
 
