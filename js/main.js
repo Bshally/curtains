@@ -27,7 +27,19 @@ $(document).ready(function(){
     //Detect change in range and convey to current label
     $('#ratio').on("change mousemove", function() {
         currentLabel.innerHTML = slider.value + " Feet" ;
+        percentage = (slider.value / slider.max) * 100;
+        console.log(percentage);
+        vinylDestination = 100 - percentage;
+        console.log(vinylDestination);
+        TweenLite.to(vinyl,.2, {
+            attr:{y: vinylDestination + "%"}
+        });
+        TweenLite.to(currentLabel,.2, {bottom: percentage + "%"});
+
     });
+
+
+
     //TweenLite.to(vinyl, 3, {
     //    //attr:{height:250}
     //

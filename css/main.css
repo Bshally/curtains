@@ -254,17 +254,17 @@ float:right;
 span.bottom-label{
     position: absolute;
     bottom:0;
-    left: -50px;
+    left: -70px;
 }
 span.top-label{
     position:absolute;
-    top:0;
-    left:-50px;
+    top:-22px;
+    left:-70px;
 }
 
 span.current-label{
     position: absolute;
-    left: -50px;
+    left: -70px;
     bottom: 50%;
 
 }
