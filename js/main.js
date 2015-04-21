@@ -4,7 +4,7 @@ $(document).ready(function(){
     var width = document.getElementById("width");
     var slider = document.getElementById("ratio");
     //Get diagram labels
-    var topLabel = document.getElementsByClassName("toplabel");
+    var topLabel = $(".top-label");
     var bottomLabel = document.getElementsByClassName("bottom-label");
     var currentLabel = document.getElementsByClassName("current-label");
     //SVG OBJ's
@@ -15,6 +15,9 @@ $(document).ready(function(){
         $('form').on('submit', function(event){
           event.preventDefault();
             var newMax = parseInt(height.value);
+            console.log(topLabel);
+            $(".topLabel").Innertext="newMax";
+            console.log(topLabel);
             slider.max = newMax;
           	sqFt = parseInt(height.value ) * parseInt(width.value);
 
