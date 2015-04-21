@@ -4,9 +4,9 @@ $(document).ready(function(){
     var width = document.getElementById("width");
     var slider = document.getElementById("ratio");
     //Get diagram labels
-    var topLabel = $(".top-label");
-    var bottomLabel = document.getElementsByClassName("bottom-label");
-    var currentLabel = document.getElementsByClassName("current-label");
+    var topLabel = document.getElementById("top-label");
+    var bottomLabel = document.getElementById("bottom-label");
+    var currentLabel = document.getElementById("current-label");
     console.log(topLabel)
     //SVG OBJ's
     var vinyl = $("#vinyl");
@@ -17,7 +17,7 @@ $(document).ready(function(){
         event.preventDefault();
         var newMax = parseInt(height.value);
         console.log(topLabel);
-        topLabel[0].innerHTML = newMax + " Feet";
+        topLabel.innerHTML = newMax + " Feet";
         console.log(topLabel);
         slider.max = newMax;
       	sqFt = parseInt(height.value ) * parseInt(width.value);
