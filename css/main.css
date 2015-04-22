@@ -213,6 +213,11 @@ fieldset{
   display:inline-block;
    
 }
+#color{
+    width:80%;
+    margin:0 auto;
+    display: block;
+}
  input.dimensions{
   color:red;
   float:right;

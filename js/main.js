@@ -27,15 +27,43 @@ $(document).ready(function(){
     //Detect change in range and convey to current label
     $('#ratio').on("change mousemove", function() {
         currentLabel.innerHTML = slider.value + " Feet" ;
+        //calc % of max
         percentage = (slider.value / slider.max) * 100;
-        console.log(percentage);
+        //Translate to y value needed for vinyl tween
         vinylDestination = 100 - percentage;
-        console.log(vinylDestination);
         TweenLite.to(vinyl,.2, {
             attr:{y: vinylDestination + "%"}
         });
         TweenLite.to(currentLabel,.2, {bottom: percentage + "%"});
 
+    });
+
+    $('#color').change(function(){
+        switch (this.value) {
+            case "Black":
+                TweenMax.to(vinyl,.2, {fill:"#222"});
+                break;
+            case "Gray":
+                TweenMax.to(vinyl,.2, {fill:"#bababa"});
+                break;
+            case "Red":
+                TweenMax.to(vinyl,.2, {fill:"#E2361F"});
+                break;
+            case "Royal Blue":
+                TweenMax.to(vinyl,.2, {fill:"#3B5B93"});
+                break;
+            case "Tan":
+                TweenMax.to(vinyl,.2, {fill:"#D2B48C"});
+                break;
+            case "White":
+                TweenMax.to(vinyl,.2, {fill:"#fff"});
+                break;
+            case "Yellow":
+                TweenMax.to(vinyl,.2, {fill:"#FFFF19"});
+                break;
+            default:
+                console.log("error");
+        }
     });
 
 
